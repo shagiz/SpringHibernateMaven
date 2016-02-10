@@ -33,9 +33,11 @@ Spring, Hibernate, PostgreSQL, Tomcat/Jetty (стэндэлон или еще л
 Установка и запуск:
 Assuming you have setup your postgres database separately and have updated persistence.xml to point at it...
 
-1. mvn clean install
-2. mvn hibernate3:hbm2ddl
-3. Use target/hibernate3/sql/schema.ddl to create your database schema
-4. mvn -e exec:java -Dexec.mainClass=com.force.samples.util.DataLoadUtil  (adds some data to the database)
-5. mvn tomcat:run
-6. Point browser at [http://localhost:8080/webapp-springmvc-jpa-hibernate](http://localhost:8080/webapp-springmvc-jpa-hibernate)
+1. Настроить коннект к базе данных в src/main/resources/hibernate.cfg.xml
+    hibernate.connection.url = адрес базы данных
+    hibernate.connection.username = имя пользователя базы
+    hibernate.connection.password = пароль пользователя
+2. mvn clean install
+3. mvn tomcat:run
+4. Открыть в браузере http://localhost:8080/MyTestSpringHibernateTomcat/
+5. Загрузить файл test1.xls или любой другой через меню страницы и проверить загруженные данные по ссылке File list
