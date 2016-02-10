@@ -39,5 +39,5 @@ Assuming you have setup your postgres database separately and have updated persi
     hibernate.connection.password = пароль пользователя
 2. mvn clean install
 3. mvn tomcat:run
-4. Открыть в браузере http://localhost:8080/MyTestSpringHibernateTomcat/
+4. Открыть http://localhost:8080/MyTestSpringHibernateTomcat/
 5. Загрузить файл test1.xls или любой другой через меню страницы и проверить загруженные данные по ссылке File list
